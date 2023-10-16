@@ -1,4 +1,5 @@
-7.6.3. Crystal lattice matches of two graphene¶
+#7.6.3. Crystal lattice matches of two graphene
+
 This subsection will introduce how to search the matched lattice for two materials which is used for building the simulated model for interface structure prediction.
 
 This is an example for matching the lattices for graphene asymmetric grain boundary. The slab model with the optimally matched lattice adopted in the interface structure prediction will be generated automatically from graphene bulk structure.
@@ -10,10 +11,11 @@ lat1.cif, lat2.cif	Structure files of bulk crystal in cif format with symmetry i
 input_mismatch.dat	Input files of lattice match toolkit
 gen_slab_model.sh	The script for calling calypso.x
 mismatch-zur.x	The executable file of lattice match toolkit
+
 calypso.x can be downloaded according to different operating systems.
 
 input.dat.ini contains all the parameters of calypso.x to cleave the surface. Here is an example:
-
+~~~
 LSurface         = T
 ICode            = 1
 Kgrid         = 0.1
@@ -43,10 +45,13 @@ Slab_Num_Layers = 8
 Num_Relaxed_Layers = 2
 
 Gen_Substrate=T
+~~~
+
 lat1.cif and lat2.cif are the user defined initial crystal files used for cleave the surfaces. They are in CIF format and the symmetry information should be included.
 
 input_mismatch.dat
 
+~~~
 # This variable specifies the maximum area of searched superlattices.
 MaximumArea = 200.0 
 
@@ -82,6 +87,8 @@ SpecifyingMillerIndex2 = F
 @MillerIndex2List
 1 1 0 
 @End
+~~~
+
 gen_slab_model.sh is a script used to call calypso.x program to cleave surface. It can be downloaded from the website: http://download.calypso.cn/
 
 Once all the input files are prepared, you may run the structure prediction via the following command, or alternatively, put this execution command into a job submit script:
