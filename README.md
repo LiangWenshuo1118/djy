@@ -132,23 +132,23 @@ No. hkl1       uv1       hkl2        uv2      mismatch_value
 `input.dat.ini` 包含了切割表面的calypso.x的所有参数。这里有一个示例：
 ~~~
 LSurface    = T                      # 此标志指定是否执行表面重构预测。
-ICode       = 1
-Kgrid       = 0.1
-PopSize     = 40
-MaxStep     = 10
+ICode       = 1                      # Defines which code to be used for local structure optimization during the structure prediction.
+Kgrid       = 0.1                    # The precision of the K-point sampling for local geometric optimization for VASP, Quantum-Esspresso and DFTB+ codes.
+PopSize     = 40                     # The population size, i.e., the total number of structures per generation.
+MaxStep     = 10                     # The maximum number of generations to be executed for the entire structure prediction simulation.
 Pre_surf_relax=F
 
 Surface_thickness = 1.5              # 该变量（以埃为单位）指定表面重构的厚度，它应稍大于体材料中两个相邻原子层的双倍距离。
 ForbiThickness    = 0.50000000
-SPACESAVING = T
-@SURFACE_ATOMS  # |原子符号|计数|
-C  4
+SPACESAVING = T                      # If this parameter is set as “True”, the output files for structure relaxation will be deleted.
+@SURFACE_ATOMS                       # 矩阵的行(m)等级由“NumberOfSpecies”决定。对于每一行，矩阵包含两列。第一列(字符串)是每种化学物种的元素符号，后面跟着该化学物种的原子数量(整数)。
+C  4                                 # |原子符号|计数|
 @END
 
 #用于从体信息构建表面
 #重构对称性
 Substrate        = Auto               # 通过将此变量定义为“Automatic”或“Auto”，底物将自动从其体结构生成。
-@MATRIX_NOTATION                      # 矩阵的行(m)等级由“NumberOfSpecies”决定。对于每一行，矩阵包含两列。第一列(字符串)是每种化学物种的元素符号，后面跟着该化学物种的原子数量(整数)。
+@MATRIX_NOTATION                      
 1     0
 0     1
 @END
