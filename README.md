@@ -1,4 +1,4 @@
-#7.6.3. Crystal lattice matches of two graphene
+# 7.6.3. Crystal lattice matches of two graphene
 
 This subsection will introduce how to search the matched lattice for two materials which is used for building the simulated model for interface structure prediction.
 
