@@ -19,14 +19,14 @@ This is an example for matching the lattices for graphene asymmetric grain bound
 
 `input.dat.ini` contains all the parameters of calypso.x to cleave the surface. Here is an example:
 ~~~
-LSurface    = T                            # The flag specifies whether surface reconstruction prediction will be performed.
+LSurface    = T                      # The flag specifies whether surface reconstruction prediction will be performed.
 ICode       = 1
 Kgrid       = 0.1
 PopSize     = 40
 MaxStep     = 10
 Pre_surf_relax=F
 
-Surface_thickness = 1.5                   # This variable (in unit of angstrom) specifies the thickness of surface reconstruction, and it should be set as a value slightly larger than the double distance of two adjacent atomic layers in bulk materials.
+Surface_thickness = 1.5              # This variable (in unit of angstrom) specifies the thickness of surface reconstruction, and it should be set as a value slightly larger than the double distance of two adjacent atomic layers in bulk materials.
 ForbiThickness    = 0.50000000
 SPACESAVING = T
 @SURFACE_ATOMS  # |atomic symbol|count|
@@ -35,18 +35,18 @@ C  4
 
 #used to build the surface from bulk info
 #reconstruction symmetry
-Substrate        = Auto                  # By defining this variable to ‘Automatic’ or ‘Auto’, the substrate will be generated automatically from its bulk structure. 
-@MATRIX_NOTATION                         # The row (m) rank of the matrix is determined by “NumberOfSpecies”. For each row, the matrix contains two columns. The first column (string) is the elemental symbol of each chemical species, followed by the number of atoms for such a chemical species (integer).
+Substrate        = Auto               # By defining this variable to ‘Automatic’ or ‘Auto’, the substrate will be generated automatically from its bulk structure. 
+@MATRIX_NOTATION                      # The row (m) rank of the matrix is determined by “NumberOfSpecies”. For each row, the matrix contains two columns. The first column (string) is the elemental symbol of each chemical species, followed by the number of atoms for such a chemical species (integer).
 1     0
 0     1
 @END
 
 Use_Cif_File = T
-Cif_File_Path = SUBSTRATE                 # Specifies the name of crystal structure (in CIF format), whose surface structure prediction is to be performed.
-Miller_index = which                      # Defines the targeted surface as determined by the Miller indices h, k, and l for doing surface reconstruction calculations.
-Slab_Vacuum_Thick = 15.0                  # This parameter (in units of angstrom) defines the vacuum region, where the whole slab is separated from its periodic images.
-Slab_Num_Layers = 8                       # Number of layers in the substrate
-Num_Relaxed_Layers = 2                    # Number of the relaxable layers in the substrate, must be smaller than SlabNumLayers
+Cif_File_Path = SUBSTRATE              # Specifies the name of crystal structure (in CIF format), whose surface structure prediction is to be performed.
+Miller_index = which                   # Defines the targeted surface as determined by the Miller indices h, k, and l for doing surface reconstruction calculations.
+Slab_Vacuum_Thick = 15.0               # This parameter (in units of angstrom) defines the vacuum region, where the whole slab is separated from its periodic images.
+Slab_Num_Layers = 8                    # Number of layers in the substrate
+Num_Relaxed_Layers = 2                 # Number of the relaxable layers in the substrate, must be smaller than SlabNumLayers
 
 Gen_Substrate=T
 ~~~
