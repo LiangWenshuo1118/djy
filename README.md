@@ -12,9 +12,9 @@ input_mismatch.dat	Input files of lattice match toolkit
 gen_slab_model.sh	The script for calling calypso.x
 mismatch-zur.x	The executable file of lattice match toolkit
 
-calypso.x can be downloaded according to different operating systems.
+`calypso.x` can be downloaded according to different operating systems.
 
-input.dat.ini contains all the parameters of calypso.x to cleave the surface. Here is an example:
+`input.dat.ini` contains all the parameters of calypso.x to cleave the surface. Here is an example:
 ~~~
 LSurface         = T
 ICode            = 1
@@ -47,7 +47,7 @@ Num_Relaxed_Layers = 2
 Gen_Substrate=T
 ~~~
 
-lat1.cif and lat2.cif are the user defined initial crystal files used for cleave the surfaces. They are in CIF format and the symmetry information should be included.
+`lat1.cif` and `lat2.cif` are the user defined initial crystal files used for cleave the surfaces. They are in CIF format and the symmetry information should be included.
 
 input_mismatch.dat
 
@@ -89,7 +89,7 @@ SpecifyingMillerIndex2 = F
 @End
 ~~~
 
-gen_slab_model.sh is a script used to call calypso.x program to cleave surface. It can be downloaded from the website: http://download.calypso.cn/
+`gen_slab_model.sh` is a script used to call calypso.x program to cleave surface. It can be downloaded from the website: http://download.calypso.cn/
 
 Once all the input files are prepared, you may run the structure prediction via the following command, or alternatively, put this execution command into a job submit script:
 
@@ -97,7 +97,7 @@ Once all the input files are prepared, you may run the structure prediction via 
 ./mismatch-zur.x > mis.log
 ~~~
 
-The result is recorded in the file mismatch-total.dat. It’s ranked by the degree of lattice mismatch (maismatch_value). The parameters “hkl” and “uv” are used to construct the surface by other software, such as Material Studios.
+The result is recorded in the file `mismatch-total.dat`. It’s ranked by the degree of lattice mismatch (maismatch_value). The parameters “hkl” and “uv” are used to construct the surface by other software, such as Material Studios.
 ~~~
 No. hkl1       uv1       hkl2        uv2      mismatch_value
 1   0 0 1   3.00  0.00   0 0 1   -2.00   3.00      1
