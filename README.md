@@ -16,9 +16,9 @@ mismatch-zur.x	The executable file of lattice match toolkit
 
 `input.dat.ini` contains all the parameters of calypso.x to cleave the surface. Here is an example:
 ~~~
-LSurface         = T
-ICode            = 1
-Kgrid         = 0.1
+LSurface    = T
+ICode       = 1
+Kgrid       = 0.1
 PopSize     = 40
 MaxStep     = 10
 Pre_surf_relax=F
