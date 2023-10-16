@@ -131,18 +131,18 @@ No. hkl1       uv1       hkl2        uv2      mismatch_value
 
 `input.dat.ini` 包含了切割表面的calypso.x的所有参数。这里有一个示例：
 ~~~
-LSurface    = T                      # 此标志指定是否执行表面重构预测。
-ICode       = 1                      # Defines which code to be used for local structure optimization during the structure prediction.
-Kgrid       = 0.1                    # The precision of the K-point sampling for local geometric optimization for VASP, Quantum-Esspresso and DFTB+ codes.
-PopSize     = 40                     # The population size, i.e., the total number of structures per generation.
-MaxStep     = 10                     # The maximum number of generations to be executed for the entire structure prediction simulation.
+LSurface    = T                      # 此标志指定是否进行表面重构预测。
+ICode       = 1                      # 定义在结构预测过程中用于局部结构优化的代码。
+Kgrid       = 0.1                    # 用于VASP、Quantum-Espresso 和 DFTB+ 代码的局部几何优化的K点采样精度。
+PopSize     = 40                     # 种群大小，即每代的结构总数。
+MaxStep     = 10                     # 整个结构预测模拟要执行的最大代数。
 Pre_surf_relax=F
 
-Surface_thickness = 1.5              # 该变量（以埃为单位）指定表面重构的厚度，它应稍大于体材料中两个相邻原子层的双倍距离。
+Surface_thickness = 1.5              # 该变量（单位为埃）指定表面重构的厚度，其应稍大于体材料中两个相邻原子层的双倍距离。
 ForbiThickness    = 0.50000000
-SPACESAVING = T                      # If this parameter is set as “True”, the output files for structure relaxation will be deleted.
-@SURFACE_ATOMS                       # 矩阵的行(m)等级由“NumberOfSpecies”决定。对于每一行，矩阵包含两列。第一列(字符串)是每种化学物种的元素符号，后面跟着该化学物种的原子数量(整数)。
-C  4                                 # |原子符号|计数|
+SPACESAVING = T                      # 如果此参数设置为“True”，则结构放松的输出文件将被删除。
+@SURFACE_ATOMS                       # 定义界面区域的原子组成，采用mx2矩阵格式。矩阵的行数(m)由“NumberOfSpecies”决定。对于每一行，矩阵包括两列。第一列（字符串）是每种化学物种的元素符号，后面是该化学物种的原子数量（整数）。
+C  4                                 # |原子符号|数量|
 @END
 
 #用于从体信息构建表面
