@@ -4,13 +4,16 @@ This subsection will introduce how to search the matched lattice for two materia
 
 This is an example for matching the lattices for graphene asymmetric grain boundary. The slab model with the optimally matched lattice adopted in the interface structure prediction will be generated automatically from graphene bulk structure.
 
-File:	Description
-calypso.x	The executable file of CALYPSO program to cleave the surface (i.e. create the primitive vectors of surface) with specified miller index
-input.dat.ini	The pre-input file to generate the input.dat file of CALYPSO specifying the controllable key parameters
-lat1.cif, lat2.cif	Structure files of bulk crystal in cif format with symmetry information
-input_mismatch.dat	Input files of lattice match toolkit
-gen_slab_model.sh	The script for calling calypso.x
-mismatch-zur.x	The executable file of lattice match toolkit
+| File Name           | Description                                                                                                         |
+|---------------------|---------------------------------------------------------------------------------------------------------------------|
+| calypso.x           | The executable file of CALYPSO program to cleave the surface (i.e. create the primitive vectors of surface) with specified miller index          |
+| input.dat.ini       | The pre-input file to generate the input.dat file of CALYPSO specifying the controllable key parameters                                        |
+| lat1.cif            | Structure files of bulk crystal in cif format with symmetry information                                                                         |
+| lat2.cif            | Structure files of bulk crystal in cif format with symmetry information                                                                         |
+| input_mismatch.dat  | Input files of lattice match toolkit                                                                                                           |
+| gen_slab_model.sh   | The script for calling calypso.x                                                                                                               |
+| mismatch-zur.x      | The executable file of lattice match toolkit                                                                                                    |
+
 
 `calypso.x` can be downloaded according to different operating systems.
 
